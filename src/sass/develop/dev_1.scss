@@ -1,0 +1,53 @@
+/* header */
+
+    .header{z-index: 2;
+
+        .header-top{background-color: rgba(66, 66, 66, .67);margin:0 -15px;padding:0 30px;display: flex;align-items:flex-start;justify-content:space-between;position: relative;height: 156px;
+
+            .header-logo{max-width: 300px;width: 100%;padding-top: 30px;
+                .header-logo-text{display: flex;align-items: center;justify-content: flex-end;color:#fff;font-weight: 500;font-size: 18px;
+                    .header-logo-text-main{margin-right: 10px;}
+                }
+            }
+
+            .header-center-img{position: absolute;bottom: 0;left: calc(50% - 215px);}
+
+            .flags-slider{padding-top: 22px;margin-right: 25px;
+                .flags-slider-wrap{width: 140px;margin-bottom: 0;
+                    .slider-item{width: 32px;height: 32px;text-align: center;
+                        a{display: inline-block;}
+                    }
+                    .slick-arrow{width: 10px;height: 15px;font-size: inherit;color:transparent;background-color: transparent;
+                        &:before, &:after{content:'';display: block;position: absolute;line-height: 0;width: 10px;height: 1px;background-color: #fff;top:50%;transition:background-color 300ms ease;}
+                        &:before{transform:rotate(45deg);}
+                        &:after{transform:rotate(-45deg);}
+                        &.slick-prev{left:-15px;
+                            &:before, &:after{transform-origin:0 50%;}
+                        }
+                        &.slick-next{right:-15px;
+                            &:before, &:after{transform-origin:100% 50%;}
+                        }
+
+                        &:hover{
+                            &:before, &:after{background-color: orange;}
+                        }
+                    }
+                }
+            }
+
+        }
+
+       .header-bottom{border-radius: 0 0 10px 10px;background-color: #232323;margin:0 -15px;padding: 0 15px;
+            nav{display: flex;justify-content:center;
+                &>ul{display: flex;
+                    &>li{
+                        &>a{display: block;}
+                        &>ul{display: none;}
+                    }
+                }
+            }
+       }
+
+    }
+
+/* /header */
