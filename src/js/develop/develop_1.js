@@ -14,6 +14,23 @@
 
 /* /header slider init */
 
+/* header menu nav toogle */
+
+    function toogleHeaderNav(){
+
+        $('.header-bottom li').hover(
+            function(){
+                $(this).find('ul').stop().slideDown(300);
+            },
+            function(){
+                $(this).find('ul').stop().slideUp(300);
+            }
+        );
+
+    };
+
+/* header menu nav toggle */
+
 
 $(document).ready(function(){
 
@@ -22,6 +39,7 @@ $(document).ready(function(){
 $(window).load(function(){
 
     headerSliderInit();
+    toogleHeaderNav();
 
 });
 
