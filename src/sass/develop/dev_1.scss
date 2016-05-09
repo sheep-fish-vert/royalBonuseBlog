@@ -18,7 +18,13 @@
             .flags-slider{padding-top: 22px;margin-right: 25px;
                 .flags-slider-wrap{width: 140px;margin-bottom: 0;
                     .slider-item{width: 32px;height: 32px;text-align: center;
-                        a{display: inline-block;}
+                        a{display: inline-block;position: relative;
+                            &:before{content:'';display: block;position:absolute;top:50%;left:50%;z-index: 0;width: 75%;height: 75%;border-radius: 50%;transform:translate(-50%, -50%);transition:all 300ms ease;}
+                            img{position: relative;z-index: 1;}
+                            &:hover{
+                                &:before{box-shadow:0 0 8px 0 rgba(255, 138, 0, .75);background-color:rgba(255, 138, 0, .35)}
+                            }
+                        }
                     }
                     .slick-arrow{width: 10px;height: 15px;font-size: inherit;color:transparent;background-color: transparent;
                         &:before, &:after{content:'';display: block;position: absolute;line-height: 0;width: 10px;height: 1px;background-color: #fff;top:50%;box-shadow:0 0 3px 0 rgba(255, 255, 255, .25);transition:background-color 300ms ease;}
@@ -145,3 +151,25 @@
     }
 
 /* /footer */
+
+/* content-top */
+
+    .content-top{margin-bottom: 30px;display: flex;align-items:center;justify-content:space-between;
+        .content-left{width: calc(100% - 160px);padding: 0 20px;}
+        .content-right{padding-right: 20px;
+            .button{width: 101px;height: 40px;background-color: #fff;box-shadow:1 0 25px 0 rgba(41, 41, 41, .34);border-radius: 10px;transition:background-color 300ms ease;
+                span{color:#6c6c6c;font-weight: 700;text-transform: uppercase;font-weight: 700;padding-left:15px;position: relative;transition:color 300ms ease;
+                    &:before, &:after{content:'';display: block;position: absolute;left:0;width: 10px;height: 3px;border-radius:5px;background-color: #6c6c6c;border-radius: 30%;transform-origin:0 50%;transition:background-color 300ms ease;}
+                    &:before{transform:rotate(45deg) translateZ(0px);top:calc(50% - 2px);}
+                    &:after{transform:rotate(-45deg) translateZ(0px);top:calc(50% - 1px);}
+                }
+                &:hover{background-color:#6c6c6c;
+                    span{color:#fff;
+                        &:before, &:after{background-color: #fff;}
+                    }
+                }
+            }
+        }
+    }
+
+/* /content-top */

@@ -19,8 +19,11 @@
 @media screen and (max-width: 767px){
 
 }
-@media screen and (max-width: 666px){
-
+@media screen and (max-width: 600px){
+    .item-cas .content { display: block; 
+        .image-block{ padding-bottom: 20px; padding-left: 0; text-align: center;}
+    }
+    .main .center-content { padding: 0;}
 }
 @media screen and (max-width: 479px){
 
