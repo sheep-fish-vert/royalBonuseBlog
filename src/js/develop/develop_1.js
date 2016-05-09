@@ -99,13 +99,15 @@
     function bodyBackgroundSize(){
 
         function bodyBackgroundSizeCalc(){
+
             var windowParams = [parseInt($(document).width()), parseInt($(document).height())];
-            console.log(windowParams);
+
             if(windowParams[1] >= windowParams[0]){
                 $('body').css({'background-size':'auto '+windowParams[1]+'px'});
             }else{
                 $('body').css({'background-size':windowParams[0]+'px auto'});
             }
+
         }
 
         bodyBackgroundSizeCalc();
@@ -130,13 +132,43 @@
 
     function selectstyling(){
 
+        var timer = null;
+
         $('.formstyler-class').styler({
-            selectPlaceholder:selectPlaceholderValue
+            selectPlaceholder:selectPlaceholderValue,
+            onSelectOpened:function(){
+                clearTimeout(timer);
+                var item = $(this);
+                var select = item.find('.jq-selectbox__dropdown');
+                select.css('display','none').stop().slideDown(300, function(){
+                    select.addClass('show');
+                });
+            },
+            onSelectClosed:function(){
+                clearTimeout(timer);
+                var item = $(this);
+                var select = item.find('.jq-selectbox__dropdown');
+                select.stop().slideUp(300, function(){
+                    select.removeClass('show');
+                });
+            }
         });
 
     }
 
 /* /search select styling */
+
+/* clear search field */
+
+    function clearSearchField(){
+
+        $('.form-input-clear').click(function(){
+            $(this).parent().find('input').val('');
+        });
+
+    }
+
+/* /clear search field */
 
 
 $(document).ready(function(){
@@ -144,6 +176,7 @@ $(document).ready(function(){
     footerAdaptation();
     bodyBackgroundSize();
     selectstyling();
+    clearSearchField();
 
 });
 
