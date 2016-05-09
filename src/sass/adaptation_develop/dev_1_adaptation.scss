@@ -10,10 +10,54 @@
 @media screen and (max-width: 1280px){
 
 }
+@media screen and (max-width: 1200px){
+
+    /* header */
+
+        .header{
+            .header-top{height: auto;padding: 20px 20px;align-items:center;
+                .header-logo{padding-top: 0;}
+                .header-center-img{display: none;}
+                .flags-slider{padding-top: 0;}
+            }
+
+        }
+
+    /* /header */
+
+}
 @media screen and (max-width: 1024px){
 
 }
 @media screen and (max-width: 992px){
+
+    /* header */
+
+        .header{
+
+            .header-top{padding: 20px 60px 20px 20px;margin-bottom: 10px;}
+
+            .header-bottom{padding: 5px 15px;margin:0;position: absolute;width: 100%;left:0;top:calc(100% - 10px);
+                .header-bottom-wrap{display: none;
+                    nav{
+                        &>ul{flex-direction:column;
+                            &>li{
+                                &>a{justify-content:center;}
+                            }
+                        }
+                    }
+                }
+            }
+
+            /* header sendwich */
+
+                .device-sendwich{display: block;}
+
+            /* /header sendwich */
+
+        }
+
+    /* /header */
 
 }
 @media screen and (max-width: 767px){
