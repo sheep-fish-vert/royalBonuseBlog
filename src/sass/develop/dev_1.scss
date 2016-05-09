@@ -7,6 +7,7 @@
         .header-top{background-color: rgba(66, 66, 66, .67);margin:0 -15px;padding:0 30px;display: flex;align-items:flex-start;justify-content:space-between;position: relative;height: 156px;
 
             .header-logo{max-width: 300px;width: 100%;padding-top: 30px;
+                a{text-decoration: none;}
                 .header-logo-text{display: flex;align-items: center;justify-content: flex-end;color:#fff;font-weight: 500;font-size: 18px;
                     .header-logo-text-main{margin-right: 10px;}
                 }
@@ -49,8 +50,8 @@
                         }
                         &>span{position: absolute;width: 10px;height: 6px;right: -16px;top:calc(50% - 3px);
                             &:before, &:after{content:'';display: block;position: absolute;width: 7px;height:2px;background-color: #fff;top:calc(50% - 3px);transition:background-color 300ms ease;}
-                            &:before{left:0;transform-origin:0 50%;transform:rotate(45deg);}
-                            &:after{right:0;transform-origin:100% 50%;transform:rotate(-45deg);}
+                            &:before{left:0;transform-origin:0 50%;transform:rotate(45deg) translateZ(0px);}
+                            &:after{right:0;transform-origin:100% 50%;transform:rotate(-45deg) translateZ(0px);}
                         }
                         &:hover{
                             &>a{color:#19ac51;
