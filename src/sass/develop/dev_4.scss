@@ -26,6 +26,7 @@
         .item{border-radius: 10px;background-color: rgb(255, 255, 255);box-shadow: 0px 1px 0.75px 0.25px rgba(41, 41, 41, 0.34);overflow: hidden;}
 
         .item-subscribe{text-align: center;padding: 39px 30px 19px;
+            .errorText{display: none !important;}
             b{text-transform: uppercase;font-weight: bold;font-size: 30px;color: #3f3f3f;font-style: normal;font-weight: 600;display: inline-block;}
             p{color: #bbbbbb;font-size: 16px;padding-bottom: 13px;}
             input{width: 100%;height: 41px;max-width: 240px;border-width: 2px;border-color: rgb(232, 232, 232);border-style: solid;border-radius: 20px;padding: 0 19px;font-size: 14px;color: #c2c2c2;
@@ -33,6 +34,12 @@
                 &:-moz-placeholder {color:#c2c2c2;}
                 &::-moz-placeholder {color:#c2c2c2;}
                 &:-ms-input-placeholder {color:#c2c2c2;}
+                &.error{border-color: red;
+                    &::-webkit-input-placeholder {color:red;}
+                    &:-moz-placeholder {color:red;}
+                    &::-moz-placeholder {color:red;}
+                    &:-ms-input-placeholder {color:red;}
+                }
             }
             .subscribe-form{padding-top: 5px;
                 .contact-form-row{margin-bottom: 20px;
@@ -53,6 +60,8 @@
 }
 
 .item-title{padding: 18px 5px;background-color: #555555;font-size: 22px;color: #fefefe;}
+
+/*right column*/
 .right-column{
    .right-column-wrap{
        &>div{margin-bottom: 19px;
@@ -61,7 +70,7 @@
        .item{border-radius: 10px;background-color: rgb(255, 255, 255);box-shadow: 0px 1px 0.75px 0.25px rgba(41, 41, 41, 0.34);overflow: hidden;text-align: center;background-color: #555555;font-size: 22px;color: #fefefe;}
 
        .tabs{display: flex;justify-content:center;align-content:flex-start;
-            .tab{text-align: center;width: 50%;border-top-left-radius: 10px;border-top-right-radius: 10px;    padding: 14px 5px;cursor: pointer;
+            .tab{text-align: center;width: 50%;border-top-left-radius: 10px;border-top-right-radius: 10px;    padding: 14px 5px;cursor: pointer;text-transform: uppercase;font-size: 16px;
                 &.active{background-color: #fff;color: #3f3f3f;}
             }
        }
@@ -88,4 +97,71 @@
    }
 }
 
+/*index-list*/
+.index-list{
+    &.bonuse-list{
+        .index-list-wrap .item-description-table{max-width: 275px;}
+    }
+    &.casino-types-list{
+        .item-star{width: 21%;display: flex;justify-content:center;align-items:center;cursor: default;}
+        .index-list-wrap .item-description{width: 60%;padding-left: 3%;}
+        .index-list-wrap .item-img{width: 28%;}
+        .index-list-wrap .item-img .item-img-wrap{max-width: 127px;height: 127px;}
+        .item-description-subtitle{margin: 4px 0px;}
+        .item-description-star-subtitle{margin-bottom: 6px;
+            p{margin-bottom: 6px;}
+            a{color: #02399f;font-size: 14px;line-height: 20px;font-weight: 500;}
+        }
+        .index-list-wrap .item-description-subtitle-text{font-size: 13px;}
+        .item-star-wrap{max-width: 84px;width: 100%;height: 80px;position: relative;background:transparent url('../../images/star-big.png') center center no-repeat;background-size: contain;margin:0 auto 15px;
+            b{position: absolute;top: 55%;left: 50%;transform: translate(-50%, -50%);font-size: 14px;color: #3f3f3f;font-weight: bold;}
+        }
+    }
+    &.payment-list{
+        .index-list-wrap .item-description-subtitle{color: #919191;margin: 5px 0px;line-height: 1.2;}
+    }
+    .index-list-wrap{
+        &>div{margin-bottom: 19px;
+            &:last-child{margin-bottom: 0;}
+            &>a{display: block;text-align: center;margin:0 auto;
+                &>img{display: inline-block;box-shadow: 0px 1px 0.75px 0.25px rgba(41, 41, 41, 0.34);}
+            }
+        }
+        .item-wrap{border-radius: 10px;background-color: rgb(255, 255, 255);box-shadow: 0px 1px 0.75px 0.25px rgba(41, 41, 41, 0.34);overflow: hidden;padding: 28px 30px;display: flex;align-content:center;justify-content:center;color: #3f3f3f;font-size: 14px;font-weight: 300;
 
+        }
+
+        .item-description{width: 66%;display: flex;align-content:center;justify-content:space-around;flex-wrap:wrap;flex-direction:column;padding-right: 5px;}
+        .item-img{width: 34%;
+            .item-img-wrap{margin:0 auto;max-width: 152px;height: 152px;overflow: hidden;border-radius: 10px;position: relative;width: 100%;
+                img{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+            }
+        }
+
+        .item-description-title{font-weight: bold;font-size: 18px;}
+        .item-description-subtitle-text{display: inline-block;vertical-align: middle;}
+        .item-description-subtitle-flag{display: inline-block;vertical-align: middle;}
+        .item-description-table{width: 100%;max-width: 220px;
+            table{width: 100%;table-layout:fixed;
+                tr td{padding: 4px 0px;word-break: break-word;}
+                tr td:last-child{text-align: right;}
+            }
+        }
+        .item-description-button{
+            a{text-decoration: none;color: #393939;background-color: #aac5f7;font-size: 12px;border-radius: 10px;width: 100%;max-width: 120px;display: flex;align-items: center;justify-content:center;height: 30px;font-weight: normal;text-transform: uppercase;transition:all ease .2s;
+                span{display: inline-block;margin:0 auto;}
+                &:hover{background-color: #C6DAFF;}
+                &:active{background-color: #96B7F3;}
+            }
+        }
+    }
+}
+
+// paginator
+.paginator{text-align: center;padding: 20px 0 20px;
+    .wp-pagenavi{display: flex;align-items:center;justify-content:center;}
+    a,span{min-height: 25px;min-width: 25px;background-color: #fff;box-shadow: 0px 1px 0.75px 0.25px rgba(41, 41, 41, 0.34);border-radius: 5px;margin: 0 4px;display: flex;align-items:center;justify-content:center;font-weight: 500;font-size: 14px;color: #6f6f6f;text-decoration: none;transition:all ease .2s;
+        &.previouspostslink,&.nextpostslink{padding: 0 8px;}
+        &.current,&:hover{color: white;background-color: #6f6f6f;}
+    }
+}

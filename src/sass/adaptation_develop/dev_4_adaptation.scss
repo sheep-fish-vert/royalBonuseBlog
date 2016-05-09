@@ -2,14 +2,14 @@
     .main{
         .left-main-content{float: none;width: 100%;flex-direction:column-reverse;}
         .left-content{width: 100%;}
-        .center-content{width: 100%;}
+        .center-content{width: 100%;padding-top: 0;}
         .right-content{float: none;width: 100%;display: block;}
     }
 }
 
 @media screen and (min-width: 768px){
     .main{
-        .left-main-content{float: none;width: 100%;flex-direction:row;}
+        .left-main-content{float: none;width: 100%;flex-direction:row;margin-bottom: 19px;}
         .left-content{width: 35%;}
         .center-content{width: 65%;}
         .right-content{float: none;width: 100%;display: block;}
@@ -25,7 +25,7 @@
 }
 @media screen and (min-width: 993px){
     .main{
-        .left-main-content{float: left;width: 74%;}
+        .left-main-content{float: left;width: 74%;margin-bottom: 0px;}
         .left-content{width: 35%;}
         .center-content{width: 65%;}
         .right-content{float: right;width: 26%;}
@@ -56,7 +56,31 @@
 
 }
 @media screen and (max-width: 767px){
+    /*index-list*/
+    .index-list{
+         &.casino-types-list{
+            .index-list-wrap .item-description{width: 100%;padding: 0;}
+            .item-star{order: 1;margin-bottom: 10px;width: 100% !important;}
+            .item-star-wrap{margin-bottom: 0;}
+         }
+         &.payment-list{
+             .index-list-wrap .item-description-subtitle{text-align: left;}
+         }
+        .index-list-wrap{
+            .item-wrap{flex-direction: column-reverse;align-items: center;padding: 11px 10px;}
 
+            .item-img{width: 100% !important;margin-bottom: 10px;
+                .item-img-wrap{width: auto;height: auto;text-align: center;
+                    img{display: inline-block;margin:0 auto;position: static;transform:none;}
+                }
+            }
+            .item-description{padding-right: 0;width: 100%;text-align: center;}
+            .item-description-table{margin:0 auto;text-align: left;}
+            .item-description-button {padding-top: 10px;
+                a{margin:0 auto;}
+            }
+        }
+    }
 }
 @media screen and (max-width: 666px){
 
