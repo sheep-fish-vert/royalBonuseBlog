@@ -124,17 +124,17 @@ function bindExample(){
 }
 
 /*header buter*/
-function headeButer(menuMobile,toggleMenu){
+function headeButer(menuMobile,toggleMenu, windowWidthMin){
     if(menuMobile){
         menuMobile.click(function(event) {
-            if($(window).width()<1024-$.scrollbarWidth()){
+            if($(window).width()<windowWidthMin-$.scrollbarWidth()){
                 $(this).toggleClass('active');
                 toggleMenu.stop().slideToggle();
             }
         });
 
         $(document).on('click touchstart',function (event){
-            if($(window).width()<1024-$.scrollbarWidth()){
+            if($(window).width()<windowWidthMin-$.scrollbarWidth()){
                 var div = toggleMenu;
                 if (!div.is(event.target) && div.has(event.target).length === 0 && !menuMobile.is(event.target) && menuMobile.has(event.target).length === 0)
                     {
@@ -153,6 +153,9 @@ $(document).ready(function() {
 
     //goTo();
     //animationBlock($('.setion-animate'));
+
+    headeButer($('.device-sendwich'), $('.header-bottom-wrap'), 992);
+
 });
 
 $(window).resize(function() {
