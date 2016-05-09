@@ -318,6 +318,17 @@
 
         /* /bonus-page */
 
+        /* payment-page */
+
+        &.payment-page{
+            .inside-first{display: block;
+                .inside-right{float: right;}
+                .inside-left{width: 100%;}
+            }
+        }
+
+        /* /payment-page */
+
     }
 
 /* /casino-inside */
