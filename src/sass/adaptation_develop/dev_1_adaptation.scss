@@ -115,6 +115,17 @@
 
     /* /search */
 
+    /* casino-inside */
+
+        .casino-inside{
+            .inside-first{flex-direction:column-reverse;align-items:center;justify-content: flex-start;
+                    .inside-left{width: 100%;}
+                    .inside-right{width: calc(100% - 30px);text-align: center;margin-bottom: 30px;}
+            }
+        }
+
+    /* /casino-inside */
+
 }
 @media screen and (max-width: 640px){
 
