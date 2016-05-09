@@ -126,11 +126,24 @@
 
 /* /body background-size */
 
+/* search select styling */
+
+    function selectstyling(){
+
+        $('.formstyler-class').styler({
+            selectPlaceholder:selectPlaceholderValue
+        });
+
+    }
+
+/* /search select styling */
+
 
 $(document).ready(function(){
 
     footerAdaptation();
     bodyBackgroundSize();
+    selectstyling();
 
 });
 
