@@ -8,7 +8,7 @@
 .vfix-before:before{content: '';height: 100%;width: 0;display: inline-block;vertical-align: middle;}
 
 .hidden-block{position:absolute;left:-99999em;top:-99999em;}
-
+::selection{background-color: rgb(31, 193, 93);color: white;}
 /* /helping adds*/
 
 /* ctext */
