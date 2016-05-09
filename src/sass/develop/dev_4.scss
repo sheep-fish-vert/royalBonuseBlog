@@ -14,6 +14,7 @@
 .button{width: 100%;height: 41px;max-width: 240px;border-radius: 20px;background-color: rgb(25, 172, 81);box-shadow: 0px 1px 0.75px 0.25px rgba(41, 41, 41, 0.34);color: white;text-transform: uppercase;text-align: center;border:none;cursor: pointer;padding: 0;display: -webkit-flex;display: -moz-flex;display: -o-flex;display: flex;align-content:center;justify-content:center;align-items: center;transition:all ease .2s;margin:0 auto;
     &:hover,&:focus{text-decoration: none;color: white;background-color: #2FD06D;outline: none;}
     &:active{background-color: #139A46;}
+    span{display: inline-block;margin:0 auto;}
 }
 
 /*left-column*/
@@ -64,15 +65,25 @@
                 &.active{background-color: #fff;color: #3f3f3f;}
             }
        }
+       .tabItem-wrap{margin-bottom: 0;padding-bottom: 30px;}
+       .slick-dots{bottom: 11px;}
+       .slick-dots li {width: 10px;}
+       .slick-dots li button{padding: 0;}
+       .slick-dots li button:before{font-size: 35px;opacity: 1;color: #e9e9e9;}
+       .slick-dots li.slick-active button:before{color:#aac5f7; }
        .tabContent{background-color: #fff;}
        .casino-items-wrap{padding: 20px 30px;}
 
-       .casino-item{display: flex;justify-content:space-between;align-content:center;}
-       .casino-item-img{width: 62px;height: 32px;overflow: hidden;border-radius: 20px;box-shadow: 0px 1px 0.75px 0.25px rgba(41, 41, 41, 0.34);position: relative;}
-       .casino-item-img-wrap{height: 100%;width: 100%;
-            img{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);max-width: 100%;}
+       .casino-item{display: flex;justify-content:space-between;align-content:center;max-width: 400px;margin: 0 auto 20px;
+            &:last-child{margin-bottom: 0;}
        }
-       .casino-item-text{font-size: 12px;color: #555555;}
+       .casino-item-img{width: 62px;height: 32px;overflow: hidden;border-radius: 20px;box-shadow: 0px 1px 0.75px 0.25px rgba(41, 41, 41, 0.34);position: relative;
+            a{display: block;}
+            .casino-item-img-wrap{height: 100%;width: 100%;
+                 img{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);max-width: 100%;}
+            }
+       }
+       .casino-item-text{font-size: 12px;color: #555555;display: flex;justify-content:center;align-content:center;flex-direction:column;}
        .button{width: 62px;height: 32px;font-size: 12px;}
    }
 }
