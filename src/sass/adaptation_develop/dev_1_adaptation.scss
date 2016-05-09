@@ -109,6 +109,12 @@
 
     /* /content-top */
 
+    /* search */
+
+        .search{margin-bottom: 20px;}
+
+    /* /search */
+
 }
 @media screen and (max-width: 640px){
 
@@ -159,6 +165,16 @@
         .content-top{text-align: center;align-items: center;}
 
     /* /content-top */
+
+    /* search */
+
+        .search{margin: 0;
+            form{flex-direction:column;
+                .form-row{width: 100%;margin-bottom: 20px;padding: 0;}
+            }
+        }
+
+    /* /search */
 
 }
 @media screen and (max-width: 320px){
