@@ -48,58 +48,105 @@
 
 /* footer adaptation */
 
-function footerAdaptation(){
+    function footerAdaptation(){
 
-    function listWrapHeight(){
+        function listWrapHeight(){
 
-        $('.footer-top').removeAttr('style');
+            $('.footer-top').removeAttr('style');
 
-        if($(window).width()<=768 && $(window).width()>640){
+            if($(window).width()<=768 && $(window).width()>640){
 
-            var arr = [];
+                var arr = [];
 
-            $('.footer-list-wrap').each(function(){
+                $('.footer-list-wrap').each(function(){
 
-                arr.push($(this).outerHeight());
+                    arr.push($(this).outerHeight());
 
-            });
+                });
 
-            var maxHeight = Math.max.apply(Math, arr);
+                var maxHeight = Math.max.apply(Math, arr);
 
-            $('.footer-top').css({'height':maxHeight+'px'});
+                $('.footer-top').css({'height':maxHeight+'px'});
+            }
+            else if($(window).width()<=640){
+                $('.footer-top').height($('.footer-top').height()/1.5);
+            }
+
+            $('.footer_placeholder').height($('.footer').outerHeight());
+
         }
-        else if($(window).width()<=640){
-            $('.footer-top').height($('.footer-top').height()/1.5);
+
+        listWrapHeight();
+
+        $(window).load(function(){
+
+            listWrapHeight();
+
+        });
+
+        $(window).resize(function(){
+
+            listWrapHeight();
+
+        });
+
+    };
+
+/* /footer adaptation */
+
+/* body background-size */
+
+    function bodyBackgroundSize(){
+
+        function bodyBackgroundSizeCalc(){
+            var windowParams = [parseInt($(document).width()), parseInt($(document).height())];
+            console.log(windowParams);
+            if(windowParams[1] >= windowParams[0]){
+                $('body').css({'background-size':'auto '+windowParams[1]+'px'});
+            }else{
+                $('body').css({'background-size':windowParams[0]+'px auto'});
+            }
         }
 
-        $('.footer_placeholder').height($('.footer').outerHeight());
+        bodyBackgroundSizeCalc();
+
+        $(window).load(function(){
+
+            bodyBackgroundSizeCalc();
+
+        });
+
+        $(window).resize(function(){
+
+            bodyBackgroundSizeCalc();
+
+        });
 
     }
 
-    listWrapHeight();
+/* /body background-size */
 
-    $(window).load(function(){
+/* search select styling */
 
-        listWrapHeight();
+    function selectstyling(){
 
-    });
+        $('.formstyler-class').styler({
+            selectPlaceholder:selectPlaceholderValue
+        });
 
-    $(window).resize(function(){
+    }
 
-        listWrapHeight();
-
-    });
-
-};
-
-/* /footer adaptation */
+/* /search select styling */
 
 
 $(document).ready(function(){
 
     footerAdaptation();
+    bodyBackgroundSize();
+    selectstyling();
 
 });
+
 
 $(window).load(function(){
 
