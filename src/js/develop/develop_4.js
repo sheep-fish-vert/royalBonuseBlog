@@ -34,7 +34,6 @@ function rightColumnSlider(){
 }
 
 $(document).ready(function(){
-    //columnTab();
     rightColumnSlider();
 });
 
