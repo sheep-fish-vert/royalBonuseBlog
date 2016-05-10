@@ -42,6 +42,14 @@
 
         /* /z-index */
 
+        $(window).resize(function(){
+
+            if($(window).width()>992){
+                $('.header-bottom-wrap').removeAttr('style');
+            }
+
+        });
+
     };
 
 /* header menu nav toggle & header-list index */
