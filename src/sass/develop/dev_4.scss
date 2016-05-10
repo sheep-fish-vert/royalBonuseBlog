@@ -74,6 +74,11 @@
                 &.active{background-color: #fff;color: #3f3f3f;}
             }
        }
+       .tabContent{position: relative;z-index: 5;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;overflow: hidden;
+            .tabItem{position: relative;z-index: 4;background-color: #fff;
+                &.hiden{position: absolute;top: 0;left: 0;z-index: -10;max-width: 100%;}
+            }
+       }
        .tabItem-wrap{margin-bottom: 0;padding-bottom: 30px;}
        .slick-dots{bottom: 11px;}
        .slick-dots li {width: 10px;}
