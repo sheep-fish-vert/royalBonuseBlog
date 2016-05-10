@@ -170,6 +170,20 @@
 
 /* /clear search field */
 
+/* casino-page stars */
+
+    function casinoPageStars(){
+
+        var starsValue = parseInt($('.star-small').data('stars-value'));
+
+        for(var i=0;i<starsValue;i++){
+            $('.star').eq(i).addClass('active');
+        }
+
+    }
+
+/* casino-page stars */
+
 
 $(document).ready(function(){
 
@@ -177,6 +191,7 @@ $(document).ready(function(){
     bodyBackgroundSize();
     selectstyling();
     clearSearchField();
+    casinoPageStars();
 
 });
 

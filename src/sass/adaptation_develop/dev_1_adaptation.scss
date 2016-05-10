@@ -25,6 +25,25 @@
 
     /* /header */
 
+    /* casino-inside */
+
+        .casino-inside{
+
+            /* casino-page */
+
+            &.casino-page{
+                .inside-first{flex-direction:column-reverse;align-items:center;justify-content: flex-start;
+                    .inside-left{width: 100%;}
+                    .inside-right{width: calc(100% - 30px);text-align: center;margin-bottom: 30px;}
+                }
+            }
+
+            /* /casino-page */
+
+        }
+
+    /* /casino-inside */
+
 }
 @media screen and (max-width: 1024px){
 
@@ -85,6 +104,25 @@
 
     /* /content-top */
 
+    /* casino-inside */
+
+        .casino-inside{
+
+            /* casino-page */
+
+            &.casino-page{
+                .inside-first{flex-direction:row;align-items:flex-start;justify-content: space-between;
+                    .inside-left{width: calc(100% - 150px);}
+                    .inside-right{width: 130px;text-align: center;margin-bottom: 30px;}
+                }
+            }
+
+            /* /casino-page */
+
+        }
+
+    /* /casino-inside */
+
 }
 @media screen and (max-width: 666px){
 
@@ -125,13 +163,24 @@
 
             /* payment-page */
 
-            &.payment-page{
-                .inside-first{
-                    .inside-right{margin: 0 0 20px 0;}
+                &.payment-page{
+                    .inside-first{
+                        .inside-right{margin: 0 0 20px 0;}
+                    }
                 }
-            }
 
             /* /payment-page */
+
+            /* casino-page */
+
+                &.casino-page{
+                    .inside-first{flex-direction:column-reverse;align-items:center;justify-content: flex-start;
+                        .inside-left{width: 100%;}
+                        .inside-right{width: calc(100% - 30px);text-align: center;margin-bottom: 30px;}
+                    }
+                }
+
+            /* /casino-page */
 
         }
 
@@ -197,6 +246,27 @@
         }
 
     /* /search */
+
+    /* casino-inside */
+
+        .casino-inside{
+
+            /* casino-page */
+
+                &.casino-page{
+                    .inside-first{
+                        .inside-left{flex-direction:column;
+                            .stars-wrap{margin-bottom: 15px;}
+                            .casino-page-main{width: 100%;}
+                        }
+                    }
+                }
+
+            /* /casino-page */
+
+        }
+
+    /* /casino-inside */
 
 }
 @media screen and (max-width: 320px){
