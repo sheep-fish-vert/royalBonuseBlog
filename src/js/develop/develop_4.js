@@ -10,9 +10,9 @@ function rightColumnSlider(){
             var itemwrap = $(this).children('.tabItem-wrap');
             if( sliderItem.length > 1 ){
                 itemwrap.on('init', function(event, slick, direction){
-                    setTimeout(function(){
+                   // setTimeout(function(){
                         columnTab();//tabs
-                    },1000);
+                    //},1000);
                 });
                 itemwrap.slick({
                     infinite: true,
@@ -24,10 +24,10 @@ function rightColumnSlider(){
             }
         });
         function columnTab(){
-            tabItem.not(':first').addClass('hide');
+            tabItem.not(':first').addClass('hiden');
             that.find('.wrapper .tab').click(function(){
                 that.find('.wrapper .tab').removeClass('active').eq($(this).index()).addClass('active');
-                tabItem.addClass('hide').eq($(this).index()).removeClass('hide');
+                tabItem.addClass('hiden').eq($(this).index()).removeClass('hiden');
             }).eq(0).addClass('active');
         }
     });
