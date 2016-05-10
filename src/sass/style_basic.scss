@@ -15,7 +15,7 @@
 
     .ctext{
 
-        h1, h2, h3, h4, h5, h6{font-weight: 700;line-height: 1.25;}
+        h1, h2, h3, h4, h5, h6{font-weight: 700;line-height: 1.25;margin-bottom: 15px;}
         h6{font-size: 16px;}
         h5{font-size: 18px;}
         h4{font-size: 20px;}
@@ -74,10 +74,12 @@ img{vertical-align:bottom;border:0;max-width:100%;}
 .footer_placeholder{height: 200px;}
 .footer{position:absolute;bottom:0;left:0;width:100%;z-index:2;overflow:hidden;}
 
-::-webkit-input-placeholder{color:#212121;}
-:-moz-placeholder{color:#212121;}
-::-moz-placeholder{color:#212121;}
-:-ms-input-placeholder{color:#212121;}
+input, textarea{
+    &::-webkit-input-placeholder{color:#212121;}
+    &:-moz-placeholder{color:#212121;}
+    &::-moz-placeholder{color:#212121;}
+    &:-ms-input-placeholder{color:#212121;}
+}
 
 /*End Layout*/
 
