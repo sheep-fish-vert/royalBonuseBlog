@@ -24,10 +24,10 @@ function rightColumnSlider(){
             }
         });
         function columnTab(){
-            tabItem.not(':first').hide();
+            tabItem.not(':first').addClass('hide');
             that.find('.wrapper .tab').click(function(){
                 that.find('.wrapper .tab').removeClass('active').eq($(this).index()).addClass('active');
-                tabItem.hide().eq($(this).index()).fadeIn();
+                tabItem.addClass('hide').eq($(this).index()).removeClass('hide');
             }).eq(0).addClass('active');
         }
     });
