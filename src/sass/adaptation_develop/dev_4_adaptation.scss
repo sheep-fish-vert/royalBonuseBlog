@@ -3,7 +3,7 @@
         .left-main-content{float: none;width: 100%;flex-direction:column-reverse;}
         .left-content{width: 100%;}
         .center-content{width: 100%;padding-top: 0;}
-        .right-content{float: none;width: 100%;display: block;}
+        .right-content{float: none;width: 100%;display: block;padding-top: 19px;}
     }
 }
 
@@ -12,7 +12,7 @@
         .left-main-content{float: none;width: 100%;flex-direction:row;margin-bottom: 19px;}
         .left-content{width: 35%;}
         .center-content{width: 65%;}
-        .right-content{float: none;width: 100%;display: block;}
+        .right-content{float: none;width: 100%;display: block;padding-top: 0;}
     }
 }
 @media screen and (min-width: 992px){
