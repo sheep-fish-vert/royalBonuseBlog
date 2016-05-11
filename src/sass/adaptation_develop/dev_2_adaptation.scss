@@ -27,6 +27,14 @@
 }
 @media screen and (max-width: 479px){
 
+    /* cas-buttons */
+
+        .cas-buttons{margin: 0;flex-wrap:wrap;
+            .cas-button-wrap{width: 100%;margin-bottom: 20px;padding: 0;}
+        }
+
+    /* /cas-buttons */
+
 }
 @media screen and (max-width: 320px){
 

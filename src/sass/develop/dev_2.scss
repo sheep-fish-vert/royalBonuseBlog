@@ -1,7 +1,7 @@
 .item-cas{ background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0px 1px 0.75px 0.25px rgba(41, 41, 41, 0.34); margin-bottom: 20px;
     .title{ width: 100%; background-color: #555555; color: white; min-height: 58px; display: flex; align-items: center; justify-content: center; font-size: 22px; line-height: 1.2; font-weight: 400;}
-    .content{ display: flex; align-items: flex-start; justify-content: space-around; padding: 30px;  flex-direction: row-reverse; 
-        .text-block{ 
+    .content{ display: flex; align-items: flex-start; justify-content: space-around; padding: 30px;  flex-direction: row-reverse;
+        .text-block{
             .row-text{display: flex; align-items: flex-start; justify-content: space-between; padding-bottom: 17px;
                 b{ font-weight: 500; font-size: 12px; color: #4f4f4f;  line-height: 1.2;}
                 p{text-align: right; font-weight: 200; font-size: 12px; color: #949494; max-width: 70%; line-height: 1.2;}
@@ -9,6 +9,18 @@
             }
         }
         .image-block{min-width: 150px; padding-left: 20px;}
+    }
+}
+
+.cas-buttons{margin: 0px -10px 20px -10px;display: flex;align-items: center;justify-content: space-between;
+    .cas-button-wrap{padding: 0 10px;width: 50%;
+        a{
+            &.button{font-size: 16px;font-weight: 500;letter-spacing: 1.25px;
+                &.button-opacity{background-color: #aac5f7;
+                    &:hover{background-color:#82acf8;}
+                }
+            }
+        }
     }
 }
 
@@ -20,12 +32,12 @@
                 &:hover{ text-decoration: underline;}
             }
             .my-mail{
-                &:before{ content: ''; position: absolute; left: 0; top: 0; background-image: url(/images/mail-to.png); width:35px; height: 35px;}               
+                &:before{ content: ''; position: absolute; left: 0; top: 0; background-image: url(/images/mail-to.png); width:35px; height: 35px;}
             }
             .my-skype{
-                &:before{ content: ''; position: absolute; left: 0; top: 0; background-image: url(/images/skype-to.png); width:35px; height: 35px;}               
+                &:before{ content: ''; position: absolute; left: 0; top: 0; background-image: url(/images/skype-to.png); width:35px; height: 35px;}
             }
-            
+
         }
     }
     input, textarea{width: 100%; height:40px; border-radius:8px; border: none;margin-bottom: 20px; box-shadow: 0px 1px 0.75px 0.25px rgba(41, 41, 41, 0.34), inset 0px 0px 0px 0px rgba(232,14,32,1);; padding: 0 30px; font-size: 18px; font-weight: 300; line-height: 1.2; color: #c0c0c0;  transition: all 0.5s;
@@ -36,7 +48,7 @@
         &.error{box-shadow: inset 0px 0px 5px 1px rgba(232,14,32,1);}
     }
     .errorText{display: none !important;}
-    
+
     textarea{height: 190px; resize: none; padding-top: 15px;}
-    .contact-send-form{max-width: 100%;} 
+    .contact-send-form{max-width: 100%;}
 }
