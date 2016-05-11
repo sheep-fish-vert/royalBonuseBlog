@@ -2,27 +2,18 @@
     <div class="left-column-wrap">
         <div class="item">
             <div class="item-subscribe">
-                <p><b>SUBSCRIBE</b></p>
-                <p>Get New Bonuses</p>
+
                 <div class="subscribe-form">
-                    <form action="" name="">
-                        <div class="contact-form-row cfix">
-                            <div class="contact-form-item">
-                                <div class="contact-form-item-input form_row">
-                                    <div class="form_input">
-                                        <input type="text" name="subscribe_mail" required="required" value="" placeholder="E-mail">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contact-form-row cfix">
-                            <div class="contact-form-item">
-                                <button type="submit" class="contact-submit button">
-                                    <span>Join</span>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                    <p><b>SUBSCRIBE</b></p>
+                    <p>Get New Bonuses</p>
+                    <div class="fb-container">
+                        <div class="fbf-text"></div>
+                        <form class="fbf-widget" action="" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=dianakcury', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+                            <input class="subscription_email" type="text" name="email" placeholder="Enter your e-mail"><input type="hidden" value="dianakcury" name="uri">
+                            <input type="hidden" name="loc" value="en_US">
+                            <input class="subscription_btn " type="submit" value="SUBSCRIBE">
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
