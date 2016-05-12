@@ -1,4 +1,5 @@
 .item-cas{ background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0px 1px 0.75px 0.25px rgba(41, 41, 41, 0.34); margin-bottom: 20px;
+    &:last-child{margin-bottom: 0px;}
     .title{ width: 100%; background-color: #555555; color: white; min-height: 58px; display: flex; align-items: center; justify-content: center; font-size: 22px; line-height: 1.2; font-weight: 400;}
     .content{ display: flex; align-items: flex-start; justify-content: space-around; padding: 30px;  flex-direction: row-reverse;
         .text-block{
@@ -28,14 +29,14 @@
     .item-cas .content{display: block;
         p{ position: relative;
             &:first-child{padding-bottom: 30px;}
-            a{text-decoration: none; padding-left: 60px; line-height: 35px; font-size: 16px; font-weight: 300; color: #878787; transition: all 0.5s;
+            a{text-decoration: none;/*padding-left: 60px;*/ line-height: 35px; font-size: 16px; font-weight: 300; color: #878787; transition: all 0.5s;
                 &:hover{ text-decoration: underline;}
             }
             .my-mail{
-                &:before{ content: ''; position: absolute; left: 0; top: 0; background-image: url(/images/mail-to.png); width:35px; height: 35px;}
+                // &:before{ content: ''; position: absolute; left: 0; top: 0; background-image: url(/images/mail-to.png); width:35px; height: 35px;}
             }
             .my-skype{
-                &:before{ content: ''; position: absolute; left: 0; top: 0; background-image: url(/images/skype-to.png); width:35px; height: 35px;}
+                //&:before{ content: ''; position: absolute; left: 0; top: 0; background-image: url(/images/skype-to.png); width:35px; height: 35px;}
             }
 
         }

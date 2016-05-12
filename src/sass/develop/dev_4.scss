@@ -7,7 +7,7 @@
 .main{padding: 19px;border-radius:10px;background-color: #e9e9e9;box-shadow: 0px 1px 0.75px 0.25px rgba(41, 41, 41, 0.34);
     .left-main-content{display: flex;flex-wrap:wrap;justify-content: space-between;align-content: flex-start;}
     .left-content{width: 35%;}
-    .center-content{width: 65%;padding:18px;}
+    .center-content{width: 65%;padding:18px;padding-bottom: 0;}
     .right-content{}
 }
 /*button*/
@@ -93,7 +93,7 @@
        .tabContent{background-color: #fff;}
        .casino-items-wrap{padding: 20px 30px;}
 
-       .casino-item{display: flex;justify-content:space-between;align-content:center;max-width: 400px;margin: 0 auto 20px;
+       .casino-item{display: flex;justify-content:space-between;align-content:center;max-width: 420px;margin: 0 auto 20px;
             &:last-child{margin-bottom: 0;}
        }
        .casino-item-img{width: 62px;height: 32px;overflow: hidden;border-radius: 20px;box-shadow: 0px 1px 0.75px 0.25px rgba(41, 41, 41, 0.34);position: relative;
@@ -102,7 +102,7 @@
                  img{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);max-width: 100%;}
             }
        }
-       .casino-item-text{font-size: 12px;color: #555555;display: flex;justify-content:center;align-content:center;flex-direction:column;}
+       .casino-item-text{font-size: 14px;color: #555555;display: flex;justify-content:center;align-content:center;flex-direction:column;width: 60%;padding: 0 1px;}
        .button{width: 62px;height: 32px;font-size: 12px;}
    }
 }

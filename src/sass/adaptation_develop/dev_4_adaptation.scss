@@ -11,7 +11,7 @@
     .main{
         .left-main-content{float: none;width: 100%;flex-direction:row;margin-bottom: 19px;}
         .left-content{width: 35%;}
-        .center-content{width: 65%;}
+        .center-content{width: 65%;padding-right: 0;}
         .right-content{float: none;width: 100%;display: block;padding-top: 0;}
     }
 }
@@ -27,7 +27,7 @@
     .main{
         .left-main-content{float: left;width: 74%;margin-bottom: 0px;}
         .left-content{width: 35%;}
-        .center-content{width: 65%;}
+        .center-content{width: 65%;padding-right: 19px;}
         .right-content{float: right;width: 26%;}
     }
 }
@@ -59,9 +59,13 @@
     /*index-list*/
     .index-list{
          &.casino-types-list{
+            .index-list-wrap .item-wrap{flex-direction: row-reverse;flex-wrap: wrap-reverse;}
             .index-list-wrap .item-description{width: 100%;padding: 0;}
-            .item-star{order: 1;margin-bottom: 10px;width: 100% !important;}
-            .item-star-wrap{margin-bottom: 0;}
+            .item-star{order: 1;margin-bottom: 10px;width: 50% !important;justify-content: flex-end;padding: 0 10px;}
+            .item-star-wrap{margin: 0 0 0px;}
+            .index-list-wrap .item-img{width: 50% !important;padding: 0 10px;
+                .item-img-wrap{margin: 0;}
+            }
          }
          &.payment-list{
              .index-list-wrap .item-description-subtitle{text-align: left;}
@@ -86,6 +90,12 @@
 
 }
 @media screen and (max-width: 479px){
+
+    .right-column{
+       .right-column-wrap{
+           .casino-item-text{font-size: 12px;width: 50%;}
+       }
+    }
 
 }
 @media screen and (max-width: 320px){

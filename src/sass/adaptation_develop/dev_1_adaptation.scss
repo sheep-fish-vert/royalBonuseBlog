@@ -158,14 +158,14 @@
         .casino-inside{
             .inside-first{flex-direction:column-reverse;align-items:center;justify-content: flex-start;
                     .inside-left{width: 100%;}
-                    .inside-right{width: calc(100% - 30px);text-align: center;margin-bottom: 30px;}
+                    .inside-right{/*width: calc(100% - 30px);text-align: center;margin-bottom: 30px;*/}
             }
 
             /* payment-page */
 
                 &.payment-page{
                     .inside-first{
-                        .inside-right{margin: 0 0 20px 0;}
+                        .inside-right{/*margin: 0 0 20px 0;*/}
                     }
                 }
 
@@ -266,6 +266,24 @@
 
         }
 
+    /* /casino-inside */
+
+}
+@media screen and (max-width: 420px){
+    /* casino-inside */
+        .casino-inside{
+            .inside-first{
+                .inside-right{width: calc(100% - 0px);text-align: center;margin-bottom: 30px;}
+            }
+
+            /* payment-page */
+                &.payment-page{
+                    .inside-first{
+                        .inside-right{margin: 0 0 20px 0;}
+                    }
+                }
+            /* /payment-page */
+        }
     /* /casino-inside */
 
 }
