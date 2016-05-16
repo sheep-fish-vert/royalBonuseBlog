@@ -305,34 +305,34 @@
 
         /* bonus-page */
 
-        &.bonus-page{
-            .ctext{
-                table{display: block;width: 100%;
-                    tbody{display: block;}
-                    tr{display: flex;justify-content:space-between;align-items:center;margin-bottom: 12px;
-                        &:last-child{margin-bottom: 0;}
-                        td{display: block;font-weight: 200;padding-left: 10px;
-                            &:last-child{text-align: right;}
+            &.bonus-page{
+                .ctext{
+                    table{display: block;width: 100%;
+                        tbody{display: block;}
+                        tr{display: flex;justify-content:space-between;align-items:center;margin-bottom: 12px;
+                            &:last-child{margin-bottom: 0;}
+                            td{display: block;font-weight: 200;padding-left: 10px;
+                                &:last-child{text-align: right;}
+                            }
                         }
                     }
                 }
             }
-        }
 
         /* /bonus-page */
 
         /* payment-page */
 
-        &.payment-page{
-            .inside-first{display: block;
-                .inside-right{float: right;margin: 0 0 10px 15px;}
-                .inside-left{width: 100%;
-                    .ctext{
-                        p{font-size: 14px;color:#919191;font-weight: 200;}
+            &.payment-page{
+                .inside-first{display: block;
+                    .inside-right{float: right;margin: 0 0 10px 15px;}
+                    .inside-left{width: 100%;
+                        .ctext{
+                            p{font-size: 14px;color:#919191;font-weight: 200;}
+                        }
                     }
                 }
             }
-        }
 
         /* /payment-page */
 
@@ -342,7 +342,7 @@
                 .inside-first{
                     .inside-left{display: flex;justify-content:space-between;align-items:center;width: calc(100% - 150px);
                         .stars-wrap{width: 90px;
-                            .star-main{width: 84px;height: 77px;display: block;margin: 0 auto 10px auto;display: flex;align-items: center;justify-content: center;background-image:url(../../images/star-big.png);background-repeat: no-repeat;
+                            .star-main{width: 84px;height: 77px;display: block;margin: 0 auto 10px auto;display: flex;align-items: center;justify-content: center;background-image:url(../../images/star-big.png);background-repeat: no-repeat;background-size:cover;
                                 .star-value{font-size: 14px;font-weight: 700;margin-bottom: -6px;}
                             }
                             .star-small{display: flex;justify-content:space-around;align-items:center;flex-wrap:wrap;width: 60px;margin: 0 auto;

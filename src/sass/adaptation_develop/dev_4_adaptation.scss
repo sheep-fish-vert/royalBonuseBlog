@@ -59,21 +59,22 @@
     /*index-list*/
     .index-list{
          &.casino-types-list{
-            .index-list-wrap .item-wrap{flex-direction: row-reverse;flex-wrap: wrap-reverse;}
+            /*.index-list-wrap .item-wrap{flex-direction: row-reverse;flex-wrap: wrap-reverse;}*/
             .index-list-wrap .item-description{width: 100%;padding: 0;}
-            .item-star{order: 1;margin-bottom: 10px;width: 50% !important;justify-content: flex-end;padding: 0 10px;}
+            .item-star{order: 1;margin-bottom: 10px;width: 50% !important;justify-content: flex-end;padding: 0 10px;display: none;}
             .item-star-wrap{margin: 0 0 0px;}
-            .index-list-wrap .item-img{width: 50% !important;padding: 0 10px;
+            .index-list-wrap .item-img{width: 50% !important;padding: 15px 10px;
                 .item-img-wrap{margin: 0;}
+                .item-star-wrap{display: block;}
             }
          }
          &.payment-list{
              .index-list-wrap .item-description-subtitle{text-align: left;}
          }
         .index-list-wrap{
-            .item-wrap{flex-direction: column-reverse;align-items: center;padding: 11px 10px;}
+            /*.item-wrap{flex-direction: column-reverse;align-items: center;padding: 11px 10px;}*/
 
-            .item-img{width: 100% !important;margin-bottom: 10px;
+            .item-img{width: 100% !important;/*margin-bottom: 10px;*/
                 .item-img-wrap{width: auto;height: auto;text-align: center;
                     img{display: inline-block;margin:0 auto;position: static;transform:none;}
                 }
@@ -95,6 +96,14 @@
        .right-column-wrap{
            .casino-item-text{font-size: 12px;width: 50%;}
        }
+    }
+
+    .index-list{
+        &.casino-types-list{
+            .index-list-wrap{
+                .item-wrap{flex-direction: row-reverse;flex-wrap: wrap-reverse;}
+            }
+        }
     }
 
 }
