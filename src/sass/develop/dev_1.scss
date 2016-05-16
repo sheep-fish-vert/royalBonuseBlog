@@ -269,8 +269,12 @@
             }
 
             .inside-right{width: 160px;
-                .inside-img{overflow: hidden;margin-bottom: 20px;
+                .inside-img{margin-bottom: 20px;position: relative;display: inline-block;
                     img{border-radius: 10px;}
+                    .star-main{position: absolute;top:0;right: 0;transform:translate(50%, -50%);}
+                    .stars-wrap{width: 100%;padding: 5px 5px 0 5px;
+                        .star-small{width: 120px;}
+                    }
                 }
                 .inside-button{margin-bottom: 15px;}
                 .inside-right-title{font-weight: 500;font-size: 14px;color:#000;text-transform: uppercase;text-align: center;margin-bottom: 10px;}
@@ -341,16 +345,7 @@
             &.casino-page{
                 .inside-first{
                     .inside-left{display: flex;justify-content:space-between;align-items:center;width: calc(100% - 150px);
-                        .stars-wrap{width: 90px;
-                            .star-main{width: 84px;height: 77px;display: block;margin: 0 auto 10px auto;display: flex;align-items: center;justify-content: center;background-image:url(../../images/star-big.png);background-repeat: no-repeat;background-size:cover;
-                                .star-value{font-size: 14px;font-weight: 700;margin-bottom: -6px;}
-                            }
-                            .star-small{display: flex;justify-content:space-around;align-items:center;flex-wrap:wrap;width: 60px;margin: 0 auto;
-                                .star{display: block;width: 10px;height: 9px;background-image:url(../../images/star-big-gray.png);background-size: 100% 100%;margin:0 1px 2px;
-                                    &.active{background-image:url(../../images/star-big.png);}
-                                }
-                            }
-                        }
+
                         .casino-page-main{width: calc(100% - 120px);
                             .casino-bonuse-info{margin-bottom: 20px;
                                 p{font-weight: 200;margin-bottom: 5px;line-height: 1.25;
@@ -362,7 +357,19 @@
                             }
                         }
                     }
-                    .inside-right{width: 130px;}
+                    .stars-wrap{width: 90px;
+                        .star-main{width: 84px;height: 77px;display: block;margin: 0 auto 10px auto;display: flex;align-items: center;justify-content: center;background-image:url(../../images/star-big.png);background-repeat: no-repeat;background-size:cover;
+                            .star-value{font-size: 14px;font-weight: 700;margin-bottom: -9px;}
+                        }
+                        .star-small{display: flex;justify-content:space-around;align-items:center;flex-wrap:wrap;width: 60px;margin: 0 auto;
+                            .star{display: block;width: 10px;height: 9px;background-image:url(../../images/star-big-gray.png);background-size: 100% 100%;margin:0 1px 2px;
+                                &.active{background-image:url(../../images/star-big.png);}
+                            }
+                        }
+                    }
+                    .inside-right{width: 130px;
+                        .stars-wrap{display: none;}
+                    }
                 }
             }
 

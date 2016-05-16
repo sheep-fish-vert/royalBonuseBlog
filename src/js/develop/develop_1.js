@@ -182,11 +182,15 @@
 
     function casinoPageStars(){
 
-        var starsValue = parseInt($('.star-small').data('stars-value'));
+        $('.star-small').each(function(){
+            var starsValue = parseInt($(this).data('stars-value'));
 
-        for(var i=0;i<starsValue;i++){
-            $('.star').eq(i).addClass('active');
-        }
+            for(var i=0;i<starsValue;i++){
+                $(this).find('.star').eq(i).addClass('active');
+            }
+        });
+
+
 
     }
 
