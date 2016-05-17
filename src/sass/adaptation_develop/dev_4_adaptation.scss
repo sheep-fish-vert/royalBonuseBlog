@@ -56,10 +56,28 @@
 
 }
 @media screen and (max-width: 767px){
-    /*index-list*/
+
+    /* /index-list */
+
     .index-list{
-         &.casino-types-list{
-            /*.index-list-wrap .item-wrap{flex-direction: row-reverse;flex-wrap: wrap-reverse;}*/
+
+        .index-list-wrap{
+            .item-wrap{max-width: 500px;margin: 0 auto;}
+            .item-img{width: auto;
+                .item-img-wrap{width: auto;height: auto;text-align: center;
+                    img{display: inline-block;margin:0 auto;position: static;transform:none;}
+                }
+            }
+            .item-description{padding-right: 0;width: 100%;max-width:290px;padding-right:15px;text-align: center;}
+            .item-description-table{margin:0 auto;text-align: left;}
+            .item-description-button {padding-top: 10px;
+                a{margin:0 auto;}
+            }
+        }
+
+        /* casino-list */
+
+        &.casino-types-list{
             .index-list-wrap .item-description{width: 100%;padding: 0;}
             .item-star{order: 1;margin-bottom: 10px;width: 50% !important;justify-content: flex-end;padding: 0 10px;display: none;}
             .item-star-wrap{margin: 0 0 0px;}
@@ -67,44 +85,60 @@
                 .item-img-wrap{margin: 0;}
                 .item-star-wrap{display: block;}
             }
-         }
-         &.payment-list{
-             .index-list-wrap .item-description-subtitle{text-align: left;}
-         }
-        .index-list-wrap{
-            /*.item-wrap{flex-direction: column-reverse;align-items: center;padding: 11px 10px;}*/
-
-            .item-img{width: 100% !important;/*margin-bottom: 10px;*/
-                .item-img-wrap{width: auto;height: auto;text-align: center;
-                    img{display: inline-block;margin:0 auto;position: static;transform:none;}
-                }
-            }
-            .item-description{padding-right: 0;width: 100%;text-align: center;}
-            .item-description-table{margin:0 auto;text-align: left;}
-            .item-description-button {padding-top: 10px;
-                a{margin:0 auto;}
-            }
         }
+
+        /* /casino-list */
+
+        /* payment-list */
+
+        &.payment-list{
+            .index-list-wrap .item-description-subtitle{text-align: left;}
+        }
+
+        /* /casino-list */
     }
+
+    /* /index-list */
+
 }
 @media screen and (max-width: 666px){
 
 }
 @media screen and (max-width: 479px){
 
-    .right-column{
-       .right-column-wrap{
-           .casino-item-text{font-size: 12px;width: 50%;}
-       }
-    }
+    /* right-column */
 
-    .index-list{
-        &.casino-types-list{
-            .index-list-wrap{
-                .item-wrap{flex-direction: row-reverse;flex-wrap: wrap-reverse;}
-            }
+        .right-column{
+           .right-column-wrap{
+               .casino-item-text{font-size: 12px;width: 50%;}
+           }
         }
-    }
+
+    /* /right-column */
+
+    /* index-list */
+
+        .index-list{
+
+            .index-list-wrap{
+                .item-wrap{flex-direction:column-reverse;align-items: center;
+                    .item-img{margin-bottom: 15px;width: auto!important;}
+                }
+            }
+
+            /* casino-list */
+
+                &.casino-types-list{
+                    .index-list-wrap{
+                        .item-wrap{flex-direction: row-reverse;flex-wrap: wrap-reverse;}
+                    }
+                }
+
+            /* /casino-list */
+
+        }
+
+    /* /index-list */
 
 }
 @media screen and (max-width: 320px){

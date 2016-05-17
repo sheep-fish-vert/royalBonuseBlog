@@ -271,8 +271,10 @@
             .inside-right{width: 160px;
                 .inside-img{margin-bottom: 20px;position: relative;display: inline-block;
                     img{border-radius: 10px;}
-                    .star-main{position: absolute;top:0;right: 0;transform:translate(50%, -50%);}
                     .stars-wrap{width: 100%;padding: 5px 5px 0 5px;
+                        .star-main{position: absolute;top:0;right: 0;transform:translate(50%, -50%);width: 64px;height: 60px;
+                            .star-value{font-size: 12px;margin-bottom: -7px;}
+                        }
                         .star-small{width: 120px;}
                     }
                 }

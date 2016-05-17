@@ -116,7 +116,7 @@
             /* casino-page */
 
             &.casino-page{
-                .inside-first{
+                .inside-first{max-width: 600px;width: 100%;margin: 0 auto 20px auto;
                     .inside-right{width: auto;text-align: center;margin-bottom: 30px;}
                 }
             }
@@ -167,8 +167,9 @@
             /* bonuse-page */
 
                 &.bonus-page{
-                    .inside-first{
+                    .inside-first{flex-direction:row;justify-content: space-between;align-items: flex-start;
                         .inside-right{margin-bottom: 30px;}
+                        .inside-left{width: calc(100% - 180px);}
                     }
                 }
 
@@ -263,6 +264,16 @@
     /* casino-inside */
 
         .casino-inside{
+
+            /* bonuse-page */
+
+                &.bonus-page{
+                    .inside-first{flex-direction:column-reverse;align-items: center;
+                        .inside-left{width: 100%}
+                    }
+                }
+
+            /* /bonuse-page */
 
             /* casino-page */
 
