@@ -272,10 +272,12 @@
                 .inside-img{margin-bottom: 20px;position: relative;display: inline-block;
                     img{border-radius: 10px;}
                     .stars-wrap{width: 100%;padding: 5px 5px 0 5px;
-                        .star-main{position: absolute;top:0;right: 0;transform:translate(50%, -50%);width: 64px;height: 60px;
+                        .star-main{position: absolute;top:0;right: 0;transform:translate(50%, -40%);width: 64px;height: 60px;
                             .star-value{font-size: 12px;margin-bottom: -7px;}
                         }
-                        .star-small{width: 120px;}
+                        .star-small{width: 150px;
+                            .star{width: 12px;height: 11px;}
+                        }
                     }
                 }
                 .inside-button{margin-bottom: 15px;}
