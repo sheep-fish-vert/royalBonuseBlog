@@ -1,5 +1,6 @@
 <div class="search">
-    <form class="search-form">
+    <form action="ajax.php" class="search-form-select" >
+        <input type="hidden" name="action" value="choose_category">
         <div class="form-row">
             <div class="form-input">
                 <select name="search_select" class="formstyler-class">
@@ -11,16 +12,20 @@
                 </select>
             </div>
         </div>
+    </form>
+    
+    <form action="ajax.php" class="search-form-input" >
+        <input type="hidden" name="action" value="input_search">
         <div class="form-row">
             <div class="form-input">
                 <div class="form-input-wrap">
-                    <input type="text" name="search_field" placeholder="Search..." required="required" />
+                    <input type="text" name="search_field" placeholder="Search..." required="required">
                 </div>
                 <div class="form-input-clear"></div>
             </div>
             <div class="submit-button">
                 <button type="submit">
-                    <img src="images/loop-img.png" alt="" />
+                    <img src="http://test127.sheep.fish/wp-content/themes/casino/images/loop-img.png" alt="">
                 </button>
             </div>
         </div>

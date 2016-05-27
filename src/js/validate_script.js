@@ -268,7 +268,8 @@ $(document).ready(function(){
 
    validate('.subscribe-form form');
    validate('.send-contact', {submitFunction:validationCall});
-   validate('.search-form');
+   
+  validate('.search-form-input', {submitFunction:validationCall});
 
    Maskedinput();
    fancyboxForm();
