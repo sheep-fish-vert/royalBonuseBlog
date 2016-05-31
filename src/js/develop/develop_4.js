@@ -21,6 +21,8 @@ function rightColumnSlider(){
                     dots: true,
                     adaptiveHeight:true
                 });
+            }else if( sliderItem.length == 1){
+                columnTab();
             }
         });
         function columnTab(){
