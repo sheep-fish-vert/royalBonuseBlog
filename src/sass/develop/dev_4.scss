@@ -44,12 +44,12 @@
                     &::-moz-placeholder {color:red;}
                     &:-ms-input-placeholder {color:red;}
                 }
-                
+
             }
             .fbf-text{
                 .feedBurner-title{text-transform: uppercase; font-weight: bold; font-size: 30px;  color: #3f3f3f; font-style: normal; font-weight: 600; display: inline-block;     padding-bottom: 13px;}
                 .feedBurner-text{color: #bbbbbb; font-size: 16px; padding-bottom: 13px;}
-                
+
             }
             .subscribe-form{padding-top: 5px;
                 .contact-form-row{margin-bottom: 20px;
@@ -122,7 +122,7 @@
 .item-description-subtitle-flag{display: inline-block;vertical-align: middle; position: relative;
     img{ }
     &:before, &:after { content: ""; display: block;  position: absolute;left: calc(50% - 2px); top: calc(50% - 13px); width: 3px;height: 26px; background-color: tomato;      opacity: 0; transform-origin: 50% 50%; border-radius: 3px; z-index: 2; }
-    
+
     &:before {transform: rotate(45deg); }
     &:after { transform: rotate(-45deg); }
     &.not-accepted:before, &.not-accepted:after {
@@ -130,7 +130,7 @@
 
 }
 .index-list{
-    
+
     &.bonuse-list{
         .index-list-wrap .item-description-table{max-width: 275px;}
     }
@@ -192,6 +192,7 @@
             }
         }
     }
+    .textwidget{text-align: center;}
 }
 
 // paginator
