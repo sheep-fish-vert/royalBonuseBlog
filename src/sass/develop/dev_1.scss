@@ -278,10 +278,8 @@
                             .star-value{font-size: 12px;margin-bottom: -7px;}
                         }
                         .star-small{width: 150px;
-                            .star{width: 12px;height: 11px;cursor: pointer;}
-                            &.chossen{
-                                .star{cursor: default;}
-                            }
+                            .star{width: 12px;height: 11px;}
+
                         }
                     }
                 }
@@ -371,8 +369,11 @@
                             .star-value{font-size: 14px;font-weight: 700;margin-bottom: -9px;}
                         }
                         .star-small{display: flex;justify-content:space-around;align-items:center;flex-wrap:wrap;width: 60px;margin: 0 auto;
-                            .star{display: block;width: 10px;height: 9px;background-image:url(../../images/star-big-gray.png);background-size: 100% 100%;margin:0 1px 2px;
+                            .star{display: block;width: 10px;height: 9px;background-image:url(../../images/star-big-gray.png);background-size: 100% 100%;margin:0 1px 2px;cursor: pointer;
                                 &.active{background-image:url(../../images/star-big.png);}
+                            }
+                            &.chossen{
+                                .star{cursor: default;}
                             }
                         }
                     }

@@ -182,13 +182,15 @@
 
     function casinoPageStars(){
 
-        $('.star-small').each(function(){
-            var starsValue = parseInt($(this).data('stars-value'));
+        if($('.star-small.chossen')){
+            $('.star-small').each(function(){
+                var starsValue = parseInt($(this).data('stars-value'));
 
-            for(var i=0;i<starsValue;i++){
-                $(this).find('.star').eq(i).addClass('active');
-            }
-        });
+                for(var i=0;i<starsValue;i++){
+                    $(this).find('.star').eq(i).addClass('active');
+                }
+            });
+        }
 
 
 
@@ -203,7 +205,6 @@ $(document).ready(function(){
     bodyBackgroundSize();
     selectstyling();
     clearSearchField();
-    //casinoPageStars();
 
 });
 
@@ -212,6 +213,8 @@ $(window).load(function(){
 
     headerSliderInit();
     toogleHeaderNav();
+
+    casinoPageStars();
 
 });
 
