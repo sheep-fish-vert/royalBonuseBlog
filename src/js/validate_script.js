@@ -227,8 +227,6 @@ function someAjax(item, someUrl, successFunc, someData){
             ajaxData = someData;
         }
 
-        console.log(ajaxData);
-
         $.ajax({
             url:someUrl,
             data:ajaxData,
@@ -263,15 +261,91 @@ function someAjax(item, someUrl, successFunc, someData){
 
 */
 
+function socialAddVoice(){
+
+    $('.inside-soc-item a').click(function (e) {
+
+        e.preventDefault();
+        var post_id = $(this).data('post'),
+            type = $(this).data('type'),
+            href = $(this).href;
+
+
+        $.ajax({
+            url:ajaxUrl,
+            data:{'action':'socialAdd', 'post_id':post_id, 'type':type },
+            method:'POST',
+            success : function(data){
+
+            }
+        });
+
+    })
+
+}
+
+/* stars ajax */
+
+    function starAjax(){
+
+        $(document).on('click', '.star-small:not(.chossen) .star', function(){
+
+            var parent = $(this).parent();
+
+            parent.addClass('chossen');
+
+            var starPostId = parent.attr('data-post-id');
+            var date = new Date;
+            date.setDate(date.getDate() + 30);
+            document.cookie = "starPost="+starPostId+"; path=/; expires="+date.toUTCString();
+
+            var thisIndex = $(this).index();
+
+            for(var i=0;i<=thisIndex;i++){
+                parent.find('.star').eq(i).addClass('active');
+            }
+
+            $.ajax({
+                url:'ajax.php',
+                data:{action:'starRating', starValue:thisIndex},
+                method:'POST'
+            });
+
+        });
+
+        if($('.star-small').length && getCookie('starPost') == $('.star-small').attr('data-post-id')){
+            $('.star-small').addClass('chossen');
+        }
+
+    }
+
+/* /stars ajax */
+
+
+/* get-cookie */
+
+    // возвращает cookie с именем name, если есть, если нет, то undefined
+    function getCookie(name) {
+      var matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+      ));
+      return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+
+/* /get-cookie */
+
+
 $(document).ready(function(){
 
 
    validate('.subscribe-form form');
    validate('.send-contact', {submitFunction:validationCall});
-   
-  validate('.search-form-input', {submitFunction:validationCall});
+
+   validate('.search-form-input', {submitFunction:validationCall});
 
    Maskedinput();
    fancyboxForm();
+
+   starAjax();
 
 });
